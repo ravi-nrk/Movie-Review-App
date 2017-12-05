@@ -1,0 +1,19 @@
+<style type="text/css">
+  md-input-container{
+    margin: 0px !important;
+  }
+</style>
+
+
+<div  layout="row" layout-align="center" style="margin-top:30px;">
+     <div layout="row" layout-align="center" layout-wrap flex="100" flex-sm="100" flex-xs="100" flex-gt-lg="75">
+      <md-card class="md-whiteframe-2dp" ng-repeat="movies in moviesObj" style="width:30%;background-color: #607D8B;color: #fff;">
+         <div style="background-image:url('/assets/{{movies.image}}'); background-size: contain;
+          background-repeat: no-repeat; height:161px; "></div>
+          <div layout="row" layout-align="space-between center">
+            <p style="font-weight: 700;padding-left: 10px;margin: 0 0 0px !important;">{{movies.name}}</p>
+             <md-button class="md-raised md-accent" style="margin-top: 3px;margin-bottom: 3px;padding-left: 0px;padding-right: 0px;font-size: 12px;" ng-click = "gotoreview(movies)">Review</md-button>
+          </div>
+        </md-card>
+    </div>
+</div>

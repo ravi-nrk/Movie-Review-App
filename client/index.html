@@ -1,0 +1,44 @@
+<html >
+<head>
+	<title>contacts</title>
+  <base href="/index.html">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+	<link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="contacts">
+
+    <md-content style="height: 100%;background-color: #ECEFF1;">
+    <section>
+    <md-subheader class="md-primary">
+      <h3 style="margin: 0px !important;"><span><img ng-src="assets/video1.png" style="height: 25px;margin-right: 10px;"></span>Movies Review</h3>
+    </md-subheader>
+    <div class="container" >
+
+      <div class="row">
+       		<div class="col-md-12">
+       			  <div ng-view></div>
+       		</div>
+      </div>
+
+    </div>
+    </section>
+    </md-content>
+   <!--  </div> -->
+   <script type="text/javascript" src="/bower_components/validator-js/validator.min.js"></script>
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/angular-aria/angular-aria.js"></script>
+  <script src="/bower_components/angular-animate/angular-animate.js"></script>
+  <script src="/bower_components/angular-material/angular-material.js"></script>
+<script src="/bower_components/angular-route/angular-route.js"></script>
+<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="app.js"></script>
+<script src="/js/controllers/homectrl.js"></script>
+<script src="/js/controllers/reviewCtrl.js"></script>
+<!-- <script src="/js/controllers/showDetailsDirective.js"></script> -->
+<script src="/js/services/servicesFile.js"></script>
+</body>
+</html>

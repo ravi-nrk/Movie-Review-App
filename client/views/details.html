@@ -1,0 +1,48 @@
+	<div class="col-md-6">
+		
+		 <md-card style="width:100%;">
+          <h3 style="text-align: center;">{{movieDetails.name}}</h3>
+		<img ng-src="/assets/{{movieDetails.image}}" >
+          <form ng-submit="addReview(FiedsValues)" style="padding-left: 20px;padding-right: 20px">
+              <md-input-container class="md-block" style="height: 34px;">
+                  <label>Name</label>
+                  <input type="text" ng-model="FiedsValues.name">
+              </md-input-container>
+				<md-input-container class="md-block" style="height: 34px;">
+					<label>Your Review</label>
+					<textarea ng-model="FiedsValues.review" md-select-on-focus></textarea>
+				</md-input-container>
+				<p>Rating</p>
+				<div layout="row" >
+					<span class="glyphicon glyphicon-star" id="star1" aria-hidden="true" style="font-size: 20px;" ng-click="stars('1')"></span>
+					<span class="glyphicon glyphicon-star" id="star2" aria-hidden="true" style="font-size: 20px;" ng-click="stars('2')"></span>
+					<span class="glyphicon glyphicon-star" id="star3" aria-hidden="true" style="font-size: 20px;" ng-click="stars('3')"></span>
+					<span class="glyphicon glyphicon-star" id="star4" aria-hidden="true" style="font-size: 20px;" ng-click="stars('4')"></span>
+					<span class="glyphicon glyphicon-star" id="star5" aria-hidden="true" style="font-size: 20px;" ng-click="stars('5')"></span>
+				</div>
+				<p ng-if="reviewLength == true" style="font-size: 12px;text-align: center;color: red;">Please add review in 30 Characters</p>
+				<p ng-if="reviewEmpty == true" style="font-size: 12px;text-align: center;color: red;">Please Enter Name and Review</p>
+				
+
+
+              <div layout="row" layout-align="center">
+                <md-button class="md-raised md-accent md-button md-ink-ripple" type="submit">Add</md-button>
+              </div>
+              
+          </form>
+
+          
+      </md-card>
+	</div>
+	<div class="col-md-6">
+		<div ng-if="showreview.length > 0" layout="column" layout-align="center center" >
+			<md-card  ng-repeat="reviews in showreview" style="width:70%;padding: 10px;background-color: #3F51B5;color: #fff;">
+			<div layout="row" layout-align="space-between center">
+				<p style="font-weight: 700;">{{reviews.name}}</p>
+				<p ng-if="reviews.rate">{{reviews.rate}}<span class="glyphicon glyphicon-star" id="star1" aria-hidden="true"></span></p>
+			</div>
+			<h5>{{reviews.review}}</h5>
+		</md-card>
+		</div>
+		
+	</div>
